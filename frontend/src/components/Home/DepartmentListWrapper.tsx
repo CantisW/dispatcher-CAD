@@ -5,8 +5,7 @@ const DepartmentListWrapper = styled.div`
     flex-direction: column;
     height: auto;
     width: 20%;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 `
 
 export default DepartmentListWrapper;
