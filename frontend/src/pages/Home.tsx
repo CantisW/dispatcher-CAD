@@ -7,13 +7,13 @@ import SidePanel from "../components/common/SidePanel";
 import DepartmentHeader from "../components/Home/DepartmentHeader";
 import DepartmentListWrapper from "../components/Home/DepartmentListWrapper";
 import DepartmentOption from "../components/Home/DepartmentOption";
-import MainWrapper from "../components/Home/MainWrapper";
+import MainWrapper from "../components/common/MainWrapper";
 import { COLORS } from "../utils/consts";
-import AnnouncementsTable from "../components/Home/AnnouncementsTable";
-import TableData from "../components/Home/TableData";
-import TableRow from "../components/Home/TableRow";
+import TableData from "../components/common/TableData";
+import TableRow from "../components/common/TableRow";
 import TableWrapper from "../components/Home/TableWrapper";
-import TableHeader from "../components/Home/TableHeader";
+import TableHeader from "../components/common/TableHeader";
+import Table from "../components/common/Table";
 
 
 const Home: React.FC = () => {
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             </Header>
             <SidePanel>
                 <h4>Options:</h4>
-                <PanelButton color={COLORS.BUTTON_RED} hoverColor={COLORS.BUTTON_RED_HOVER}>Logout</PanelButton>
+                <PanelButton color={COLORS.BUTTON_RED} hoverColor={COLORS.BUTTON_RED_HOVER} href="/login">Logout</PanelButton>
                 <PanelButton>My Account</PanelButton>
                 <PanelButton>Penal Code</PanelButton>
                 <PanelButton>Report LEO</PanelButton>
@@ -47,16 +47,16 @@ const Home: React.FC = () => {
                     <DepartmentHeader>
                         <h3>Departments</h3>
                     </DepartmentHeader>
-                    <DepartmentOption>Civilian</DepartmentOption>
-                    <DepartmentOption>Los Angeles Police Department</DepartmentOption>
-                    <DepartmentOption>Special Weapons and Tactics</DepartmentOption>
-                    <DepartmentOption>California Highway Patrol</DepartmentOption>
-                    <DepartmentOption>Los Angeles Fire Department</DepartmentOption>
-                    <DepartmentOption>Los Angeles Communications Department</DepartmentOption>
+                    <DepartmentOption href="/civilian">Civilian Operations</DepartmentOption>
+                    <DepartmentOption href="/police">Los Angeles Police Department</DepartmentOption>
+                    <DepartmentOption href="/police">Special Weapons and Tactics</DepartmentOption>
+                    <DepartmentOption href="/police">California Highway Patrol</DepartmentOption>
+                    <DepartmentOption href="/fire">Los Angeles Fire Department</DepartmentOption>
+                    <DepartmentOption href="/dispatch">Los Angeles Communications Department</DepartmentOption>
                 </DepartmentListWrapper>
                 <h2>Announcements</h2>
                 <TableWrapper>
-                    <AnnouncementsTable>
+                    <Table>
                         <thead>
                             <TableRow>
                                 <TableHeader>Message</TableHeader>
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
                                 <TableData>02/94/2024</TableData>
                             </TableRow>
                         </tbody>
-                    </AnnouncementsTable>
+                    </Table>
                 </TableWrapper>
             </MainWrapper>
         </>
