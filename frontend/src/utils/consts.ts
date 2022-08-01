@@ -14,6 +14,8 @@ export const COLORS = {
     LINK_HOVER: "#c2c2c2",
     BLUE: "#001ab7",
     YELLOW: "#ffc91b",
+    BUTTON_GREEN: "#169c09",
+    BUTTON_GREEN_HOVER: "#4ba343"
 }
 
 export const API_TIMEOUT: number = 6000; // in ms
